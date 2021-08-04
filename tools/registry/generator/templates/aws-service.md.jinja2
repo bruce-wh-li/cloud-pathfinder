@@ -1,0 +1,24 @@
+---
+title: {{ tool['AWS Service Name'] }}
+description: This is an overview of the tool {{ tool['AWS Service Name'] }}, and its current status  within BC Gov.
+{% if tool['Image URL']|length -%}
+image: {{ tool['Image URL'] }}
+{%- endif %}
+---
+<!---
+Note: this is a generated file.  You should not edit it directly.  Please check https://github.com/bcgov/cloud-pathfinder for details.
+-->
+# {{ tool['AWS Service Name'] }}
+
+{% if tool['Image URL']|length -%}
+<img src="{{ tool['Image URL'] }}" alt="{{ tool['AWS Service Name'] }}" width="150"/>
+{%- endif %}
+
+## Endorsement Status
+{{ tool['Endorsement Status'][0] }}
+
+## Relevant BC Gov Reference
+{{ tool['Relevant BC Gov Reference'] }}
+
+## CSP Controls/Configurations
+{{ tool['CSP Controls/Configurations'] }}
