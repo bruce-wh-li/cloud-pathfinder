@@ -1,0 +1,31 @@
+{
+	"name": "Cloud Pathfinder",
+	"description": "Cloud Pathfinder Services.",
+	"sourceProperties": {
+		"sources": [
+			{
+				"sourceType": "github",
+				"sourceProperties": {
+					"url": "http://github.com/bcgov/cloud-pathfinder",
+					"owner": "bcgov",
+					"repo": "cloud-pathfinder",
+					"files": [
+					  	{% for page in registry_contents['pages'] -%}
+        					"{{ page }}"{{ "," if not loop.last }}
+					  	{% endfor -%}
+					]
+				}
+			}
+		]
+	},
+	"attributes": {
+		"labels": [
+			"Documentation"
+		],
+		"personas": [
+			"Developer",
+			"Product Owner"
+		]
+	},
+	"resourceType": "Documentation"
+}
