@@ -1,11 +1,8 @@
 import argparse
-import re
 import os
 
-import pandas as pd
 from airtable import Airtable
 from jinja2 import Environment, PackageLoader, select_autoescape
-from slugify import slugify
 
 
 def stripRelative(path) -> str:
