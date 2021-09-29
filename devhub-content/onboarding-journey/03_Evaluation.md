@@ -12,4 +12,4 @@ Ask your Product Owner to begin working on our onboarding forms:
 - [Cloud Service Provider selection rationale](https://airtable.com/shrnB89KfH2MoR7jx)
 - [MOU for expense authority approval of estimated cloud spend](https://airtable.com/shrnqVHUyqxz5luMS)
 
-Let us know if you need help with these forms: Cloud.Pathfinder@gov.bc.ca
+Let us know if you need help with these forms: [Cloud.Pathfinder@gov.bc.ca](mailto:Cloud.Pathfinder@gov.bc.ca)
