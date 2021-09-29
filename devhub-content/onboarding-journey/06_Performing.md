@@ -6,7 +6,7 @@ description: Performing description
 # Performing
 Now that you’re up and running in the cloud, remember our Shared Responsibilities Model – ensure that your team is taking care of their responsibilities:
 
-<table class="MsoTable15Grid4" border="1" cellspacing="0" cellpadding="0" align="left"  style="max-width:687.0pt;border-collapse:collapse;border:none;" summary="Public Cloud Accelerator Service Shared Responsibilities Model for compute and storage, clarifying the responsibilities shared between Ministry Teams, Communities of Practice, Accelerated Public Cloud Services Team and the Cloud Service Providers.">
+<table class="MsoTable15Grid4" border="1" cellspacing="0" cellpadding="0" align="left"  style="display:inline-block; max-width:687.0pt;border-collapse:collapse;border:none;" summary="Public Cloud Accelerator Service Shared Responsibilities Model for compute and storage, clarifying the responsibilities shared between Ministry Teams, Communities of Practice, Accelerated Public Cloud Services Team and the Cloud Service Providers.">
  <tbody><tr style="height:27.4pt">
   <th width="153" style="width:115.05pt;border:none;border-bottom:solid white 4.5pt;
   background:black;padding:0cm 5.4pt 0cm 5.4pt;height:27.4pt">
