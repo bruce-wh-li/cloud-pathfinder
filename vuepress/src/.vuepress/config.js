@@ -22,6 +22,11 @@ module.exports = {
   ],
   base: "/cloud-pathfinder/",
 
+  /*
+   * Output directory for the VuePress Build
+   */
+  dest: "../docs",
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
