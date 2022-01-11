@@ -1,18 +1,18 @@
-name: Deploy to GitHub pages
+name: VuePress Static Content Generator
 on:
   push:
-    # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
+    # This might change - push vs PR merge
     branches:
       - master
     paths:
       - "vuepress/**"
 jobs:
   run:
-    name: Generate VuePress Static Content
+    name: Generate Static Content
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -20,13 +20,13 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Generate static vuepress files
+      - name: Generate Static Content
         run: |
           cd ./vuepress
           npm ci
           npm run build
 
-      - name: Commit generates static contents
+      - name: Commit Generated Static Content
         uses: EndBug/add-and-commit@v7
         with:
           author_name: GitHub Actions
