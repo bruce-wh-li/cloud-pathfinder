@@ -17,19 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout non master branch
-        uses: actions/checkout@v2
-
-      - name: Commit markdown files
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: GitHub Actions
-          author_email: github-actions@github.com
-          branch: master
-          message: "Automated commit."
-          add: ${{ github.workspace }}/docs
-          cwd: './'
-
       - name: Checkout master branch
         uses: actions/checkout@v2
         with:
