@@ -1,0 +1,44 @@
+name: GitHub Pages
+on:
+  # Trigger the workflow on pull request if content in
+  # the vuepress folder changes. This merges the changes
+  # to the master branch
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+#    paths:
+#      - "vuepress/**"
+
+jobs:
+  run:
+    name: Merge VuePress content to master branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'master'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Generate static content
+        run: |
+          cd ./vuepress
+          npm ci
+          npm run build
+
+      - name: Commit generated static content
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: GitHub Actions
+          author_email: github-actions@github.com
+          branch: master
+          message: "Automated commit."
+          add: ${{ github.workspace }}/docs
+          cwd: './'
