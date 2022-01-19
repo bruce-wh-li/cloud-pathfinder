@@ -1,10 +1,15 @@
 ---
 home: true
-heroText: CloudPathfinder
-heroImage: /cloud_pathfinder_team.png
+heroText: 
+heroImage: /cloud_pathfinder_logo_2022.png
 tagline: 
-actionText: Quick Start →
-actionLink: /guide/
+actions:
+- text: Quick Start
+  link: /guide/
+  type: primary
+- text: Cloud 101
+  link: /guide/
+  type: secondary
 features:
 - title: Compute and Storage
   details: Compliant Compute and Storage in the cloud
@@ -12,5 +17,6 @@ features:
   details: Compliant Compute and Storage in the cloud
 - title: Compute and Storage
   details: Compliant Compute and Storage in the cloud
-footer: Made by  with ❤️
+footer: The CloudPathFinder Team 
+footerHtml: true
 ---

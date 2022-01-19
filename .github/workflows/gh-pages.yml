@@ -3,9 +3,10 @@ on:
   # Trigger the workflow on pull request if content in
   # the vuepress folder changes. This merges the changes
   # to the master branch
-  pull_request:
-    types:
-      - closed
+#  pull_request:
+#    types:
+#      - closed
+  push:
     branches:
       - master
 #    paths:
@@ -33,12 +34,27 @@ jobs:
           npm ci
           npm run build
 
-      - name: Commit generated static content
-        uses: EndBug/add-and-commit@v7
+      # please check out the docs of the workflow for more details
+      # @see https://github.com/crazy-max/ghaction-github-pages
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          author_name: GitHub Actions
-          author_email: github-actions@github.com
-          branch: master
-          message: "Automated commit."
-          add: ${{ github.workspace }}/docs
-          cwd: './'
+          verbose: true
+          commit_message: "Automated commit to gh-pages branch"
+          # deploy to gh-pages branch
+          target_branch: gh-pages
+          # deploy the default output dir of VuePress
+          build_dir: ./vuepress/src/.vuepress/dist
+        env:
+          # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+#      - name: Commit generated static content
+#        uses: EndBug/add-and-commit@v7
+#        with:
+#          author_name: GitHub Actions
+#          author_email: github-actions@github.com
+#          branch: master
+#          message: "Automated commit."
+#          add: ${{ github.workspace }}/docs
+#          cwd: './'
