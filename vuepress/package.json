@@ -10,14 +10,29 @@
   "repository": "https://github.com/unoah/cloud-pathfinder/cloud-pathfinder",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src",
+    "info": "vuepress info",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:format": "eslint --ext .ts,.tsx && prettier --write ./src/.vuepress"
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3",
-    "vuepress-theme-book": "^0.0.6"
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "@vuepress/bundler-vite": "^2.0.0-beta.33",
+    "@vuepress/cli": "^2.0.0-beta.33",
+    "@vuepress/utils": "^2.0.0-beta.33",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "vuepress": "^2.0.0-beta.33",
+    "vue-loader": "^15.9.8",
+    "vuepress-webpack": "^2.0.0-beta.33",
+    "vue-router": "^4.0.12"
   },
   "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "vuepress-vite": "^2.0.0-beta.33"
   }
 }
