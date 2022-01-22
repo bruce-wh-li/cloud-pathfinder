@@ -109,7 +109,7 @@ metadata:
 
 - From the cli, review the secret with `oc describe secret rocketchat-[username]-secret`
 
-```
+```shell
 oc describe secret rocketchat-[username]-secret
 Name:         rocketchat-[username]-secret
 Namespace:    [namespace]
@@ -125,7 +125,7 @@ SECRET_API_KEY:  16 bytes
 
 - Export the secret to view the contents with `oc get --export secret rocketchat-[username]-secret -o yaml`
 
-```
+```shell
 oc get --export secret rocketchat-[username]-secret -o yaml
 apiVersion: v1
 data:
@@ -138,7 +138,7 @@ metadata:
 type: Opaque
 ```
 > on Mac's and Linux machines that have the base64 binary, you can decode the value as a reference
-```
+```shell
 echo "c2hlYXN0ZXdhcnQ=" | base64 -d
 ```
 

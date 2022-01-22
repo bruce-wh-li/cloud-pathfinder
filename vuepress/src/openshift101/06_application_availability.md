@@ -35,7 +35,7 @@ with multiple pods. Please refer to specific application documentaion for detail
 
 - Or from the CLI
 
-```oc:cli
+```shell
 oc -n [-dev] scale deployment/rocketchat-[username] --replicas=2
 ```
 - Notice the balancing across nodes by exploring the details of each pod
@@ -43,7 +43,7 @@ oc -n [-dev] scale deployment/rocketchat-[username] --replicas=2
 
   - Or from the CLI notice the hosts the pod runs on (in the last field)
 
-  ```oc:cli
+  ```shell
   oc -n [-dev] get pods --field-selector=status.phase=Running -l deployment=rocketchat-[username] -o wide
   ```
   you can also simply combine with grep:
@@ -51,13 +51,13 @@ oc -n [-dev] scale deployment/rocketchat-[username] --replicas=2
   oc -n [-dev] get pods -o wide | grep rocketchat-[username]
   ```
   - The output should look similar to this:
-  ```
+  ```shell
   rocketchat-[username]-7-k6kcc    1/1       Running   0          16m       172.51.68.135   training-aro-us-vmdqq-worker-westus22-kvjdt
   rocketchat-[username]-7-k82w2    0/1       Running   0          1m        172.51.76.32    training-aro-us-vmdqq-worker-westus23-kvjdt
   ```
 
 - Delete single pod, refresh the URL of application and notice that the application is served by the surviving pods
-  ```oc:cli
+  ```shell
   oc -n [-dev] get pods --field-selector=status.phase=Running -l deployment=rocketchat-[username] -o name | head -1 | xargs -I {} oc -n [-dev] delete {}
 
   watch -dg -n 1 curl -fsSL http://rocketchat-[username]-[-dev].[namespace].apps.pathfinder.aro.devops.gov.bc.ca/api/info
@@ -67,7 +67,7 @@ oc -n [-dev] scale deployment/rocketchat-[username] --replicas=2
   ```
   
 - Perform deployment, refresh the URL of application and notice that the application is served by the surviving pods
-  ```oc:cli
+  ```shell
   oc -n [-dev] rollout latest deployment/rocketchat-[username]
   
   # Monitor pods being created and deleted; and

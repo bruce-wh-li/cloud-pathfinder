@@ -8,7 +8,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   // title: "CloudPathfinder",
   description: "CPF Documentation",
   lang: 'en-US',
-  // dest: './src/../../docs',
   debug: true,
 
   head: [
@@ -64,7 +63,15 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: "/cloud_pathfinder_icon_2022.png",
     repo: "",
-    docsDir: "",
+    backToTop: true,
+    mediumZoom: true,
+    externalLinkIcon: true,
+    nprogress: true,
+
+    docsRepo: 'https://github.com/bcgov/cloud-pathfinder',
+    docsBranch: 'master',
+    docsDir: 'vuepress/src',
+    editLinkPattern: ':repo/edit/:branch/:path',
 
     // theme-level locales config
     locales: {

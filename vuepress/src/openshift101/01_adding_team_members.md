@@ -32,7 +32,7 @@ the default roles.
 
 This can also be done on the CLI with the `oc` utility: 
 
-```
+```shell
 oc policy add-role-to-user [role] [username]
 ```
 
