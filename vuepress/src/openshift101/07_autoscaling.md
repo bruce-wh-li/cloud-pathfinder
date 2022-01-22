@@ -14,13 +14,13 @@ Web Console.
 - First take some time to discover the configurable fields that belong to a HorizontalPodAutoscaler `oc explain HorizontalPodAutoscaler` 
 - from the cli run 
 > You are configuring a very low CPU request target (such as 10%) so that you can test it easily by browsing the web application. In production the target would be closer to 70-80%
-```oc:cli
+```shell
 oc -n [-dev] autoscale deployment/rocketchat-[username] --min 1 --max 10 --cpu-percent=10
 ```
 
 - Browse to the application to generate some load and monitor the behavior of the pods
 - Generate some activity such as creating messages, channels, etc. 
-  ```oc:cli
+  ```shell
   # update the URL below and grab a new integration URL
   # Open RocketChat, go to Adminstration > Integrations >  New Integration > Incoming WebHook
   #    Set "Enabled" to "true"
@@ -39,6 +39,6 @@ oc -n [-dev] autoscale deployment/rocketchat-[username] --min 1 --max 10 --cpu-p
 ![](./images/05_autoscaling_02.png)
 
 - Remove the autoscaler
-  ```oc:cli
+  ```shell
   oc -n [-dev] delete hpa/rocketchat-[username]
   ```

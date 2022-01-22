@@ -14,19 +14,19 @@ each member can create their own Rocket.Chat docker build.
 
 - To start, switch to the __Tools Project__
 
-```
+```shell
 oc project [-tools]
 ```
 
 - With the `oc` cli, create the build
 
-```oc:cli
+```shell
 oc -n [-tools] new-build https://github.com/BCDevOps/devops-platform-workshops-labs/ --context-dir=apps/rocketchat --name=rocketchat-[username]
 ```
 
 - The output of the previous command should be similar to the following: 
 
-```
+```shell
 
 --> Found image 8431f8b (21 hours old) in image stream "ocp101a-tools/rocketchat" under tag "latest" for "rocketchat"
 
@@ -60,7 +60,7 @@ oc -n [-tools] logs -f bc/rocketchat-[username]
 
 - Or this can be done on the CLI
 
-```
+```shell
 oc -n [-tools] get bc
 oc -n [-tools] status
 ```

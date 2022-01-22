@@ -17,7 +17,7 @@ __Objective__: Create an init container
 
 - Add the following section of code under `spec: -> template: -> spec:`
 
-```
+```yaml
       initContainers:
       - name: init
         image: giantswarm/tiny-tools
@@ -42,7 +42,7 @@ Lifecycle hooks can be configured to start and stop a container properly. The li
 - From the Web Console, navigate to the `rocketchat-[username]` deploymentconfig and click on `YAML` tab
     - If you wish to perform this from the cli with the `oc` tool, type `oc edit deployment/rocketchat-[username]`
 - Add the following section of code under `spec: -> template: -> spec: -> containers`
-```
+```yaml
           lifecycle:
             postStart:
               exec:
@@ -62,7 +62,7 @@ It may be necessary, from time to time, to override the initial command/entrypoi
     - If you wish to perform this from the cli with the `oc` tool, type `oc edit deployment/rocketchat-[username]`
 - Add the following section of code under `spec: -> template: -> spec: -> containers`
 
-```
+```yaml
           command:  ["/bin/sh", "-c", "c=$(curl -X POST -H 'Content-Type: application/json' --data '{\"text\": \"'\"$HOSTNAME\"' is AN OVERRIDING COMMAND! \"}' https://chat.pathfinder.gov.bc.ca/hooks/xxx/xxx)"]
 ```
 - Take note of the pattern that will happen in the rocketchat notification screen
