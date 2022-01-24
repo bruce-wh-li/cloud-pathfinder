@@ -2,13 +2,17 @@
 This is a placeholder to work with the students and determine what they find valuable in this sheet. 
 
 ## Deleting your lab
-__WARNING__: You should ALWAYS validate the output before using `oc delete`. You can do that by replacing `oc delete` with `oc get`, or if using with xargs prefix with `echo`.
+::: warning [WARNING]
+You should ALWAYS validate the output before using `oc delete`. You can do that by replacing `oc delete` with `oc get`, or if using with xargs prefix with `echo`.
+:::
+::: warning [WARNING]
+Always double check, and triple check before running `oc delete`!!!
+:::
+::: warning [WARNING]
+Be very careful when copying and pasting directly into a terminal!!!
+:::
 
-__WARNING__: Always double check, and triple check before running `oc delete`!!!
-
-__WARNING__: Be very careful when copying and pasting directly into a terminal!!!
-
-```
+```shell
 # List/validate resources to be deleted by labels
 oc -n [-tools] get all -l build=rocketchat-[username]
 

@@ -21,11 +21,11 @@ Since the Rocket Chat application was built from scratch and not deployed from a
 ![](./images/11_resources_03.png)
 
 - Reduce the CPU (request and limit) to `65 millicores` and Memory (request and limits) to `100 Megabytes` and monitor the startup time of the pod
-  ```oc:cli
+  ```shell
   oc -n [-dev] set resources deployment/rocketchat-[username] --requests=cpu=65m,memory=100Mi --limits=cpu=65m,memory=100Mi
   ```
 - Monitor the startup events of your pod and measure the time it takes to start
-  ```oc:cli
+  ```shell
   # Restart deployment; and observe
   oc -n [-dev] rollout restart deployment/rocketchat-[username]
 
@@ -36,12 +36,12 @@ Since the Rocket Chat application was built from scratch and not deployed from a
   > you may notice your pod starts to crash loop. This is most likely because the `liveness` probe you added from an earlier lab is timing out. This is an important consideration when deciding to tune pod resources. It is always a balance.
 
 - Remove the limits previously imposed, and set your pod to `1 core` (or `1000 millicores`) for the request and limit
-  ```oc:cli
+  ```shell
   oc -n [-dev] set resources deployment/rocketchat-[username] --requests=cpu=1000m,memory=512Mi --limits=cpu=1000m,memory=1024Mi
   ```
 
 - Monitor the status and speed of the new deployment
-  ```oc:cli
+  ```shell
   # Start new deployment; and
   oc -n [-dev] rollout restart deployment/rocketchat-[username]
 
@@ -55,7 +55,7 @@ If there are many team members (and therefor workloads) working together in the 
 
 - Reset resources utilization to something more appropriate
 
-```oc:cli
+```shell
 oc -n [-dev] set resources deployment/rocketchat-[username] --requests=cpu=150m,memory=256Mi --limits=cpu=200m,memory=400Mi
 ```
 

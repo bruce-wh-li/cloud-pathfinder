@@ -12,7 +12,7 @@ The dev project is where applications are deployed. In this case, we will deploy
 
 - From the CLI
 
-```oc:cli
+```shell
 # retagging the image stream from latest to dev
 oc -n [-tools] tag rocketchat-[username]:latest rocketchat-[username]:dev
 
@@ -26,13 +26,13 @@ __Objective__: Deploy RocketChat from the image previously built.
 
 - from the CLI
 
-```oc:cli
+```shell
 oc -n [-dev] new-app [-tools]/rocketchat-[username]:dev --name=rocketchat-[username]
 ```
 
 - The output should be as follows
 
-```
+```shell
 --> Found image b949f08 (2 hours old) in image stream "[devops-training-namespace]-tools/rocketchat-[username]" under tag "dev" for "[devops-training-namespace]-tools/rocketchat-[username]:dev"
 
     Node.js 8 
@@ -65,7 +65,7 @@ __Objective__: Get RocketChat to startup faster by tweaking `Resource Requests a
 Increasing the resources (especially CPU) right now will help with faster pod startup.
 
 - From the terminal, run the follow oc command:
-```oc:cli
+```shell
 oc -n [-dev] set resources deployment/rocketchat-[username] --requests='cpu=500m,memory=512Mi' --limits='cpu=1000m,memory=1024Mi'
 ```
 
@@ -83,7 +83,7 @@ project. Admin users manage service accounts and will need to grant rolebindings
 
 - From the CLI add a service account to tools granting image pull access to the from the dev project: 
 
-```oc:cli
+```shell
 oc -n [-tools] policy add-role-to-user system:image-puller system:serviceaccount:[-dev]:default
 ```
 
@@ -123,7 +123,7 @@ From the console click the deployment config and click __view logs__ beside the 
 
 - Or from the CLI
 
-```oc:cli
+```shell
 # Show your pod's log
 oc -n [-dev] logs -f "$(oc -n [-dev] get pods --field-selector=status.phase=Running -l deployment=rocketchat-[username] -o name --no-headers | head -1)"
 ```
@@ -141,13 +141,13 @@ for your application.
 ### From CLI
   - Find out what 'mongodb-ephemeral' is
 
-```oc:cli
+```shell
 oc -n [-dev] new-app --search mongodb-ephemeral
 ```
 
   - The output will tell us that `mongodb-ephemeral` is a template in the `openshift` project:
 
-```
+```shell
 -----
 mongodb-ephemeral
   Project: openshift
@@ -158,17 +158,17 @@ WARNING: Any data stored will be lost upon pod destruction. Only use this templa
 
   - List available parameters of the template
 
-```oc:cli
+```shell
 oc -n openshift get template/mongodb-ephemeral -o json | oc process -f - --parameters=true
 ```
 
   - Create MongoDB based on a template in the catalog
 
-```oc:cli
+```shell
   oc -n [-dev] new-app --template=openshift/mongodb-ephemeral -p MONGODB_VERSION=3.6 -p DATABASE_SERVICE_NAME=mongodb-[username] -p MONGODB_USER=dbuser -p MONGODB_PASSWORD=dbpass -p MONGODB_DATABASE=rocketchat --name=rocketchat-[username]
 ```
 > If you ran the cli command you would get an output like this 
-  ```
+  ```shell
   Creating resources ...
       secret "mongodb-patricksimonian" created
       service "mongodb-patricksimonian" created
@@ -217,14 +217,14 @@ a database has been deployed, the app does not know how or where to connect to M
 ![](./images/03_deploy_env_02.png)
 
 - Add the following environment variable with the connection string details configured for mongodb
-```
+```shell
 MONGO_URL=mongodb://dbuser:dbpass@mongodb-[username]:27017/rocketchat
 ```
 ![](./images/03_deploy_config_01.png)
 
  
 You can also use the CLI to apply the environment variable.
-```
+```shell
 oc -n [-dev] set env deployment/rocketchat-[username] "MONGO_URL=mongodb://dbuser:dbpass@mongodb-[username]:27017/rocketchat"
 ```
 
@@ -236,7 +236,7 @@ oc -n [-dev] set env deployment/rocketchat-[username] "MONGO_URL=mongodb://dbuse
 > this is a stretch exercise, completing this section is not a requirement for the next section of the lab
 
 If you are feeling at odds with things like __dbpass__ being out in the open as an environment variable. That is a good thing! For demonstration purposes you are creating a `Single Value Env`. Sensitive information like passwords should be stored in a `Secret` and referenced as `envFrom`. In addition, you can also use the [Downward API](https://docs.openshift.com/container-platform/4.4/nodes/containers/nodes-containers-downward-api.html#nodes-containers-downward-api-container-secrets_nodes-containers-downward-api) to refer to the secret created by MongoDB.
-  ```oc:cli
+  ```shell
   oc -n [-dev] rollout pause deployment/rocketchat-[username] 
 
   oc -n [-dev] patch deployment/rocketchat-[username] -p '{"spec":{"template":{"spec":{"containers":[{"name":"rocketchat-[username]", "env":[{"name":"MONGO_USER", "valueFrom":{"secretKeyRef":{"key":"database-user", "name":"mongodb-[username]"}}}]}]}}}}'
@@ -259,12 +259,12 @@ Your rocketchat application should already have a route created for it. If you w
 There are 2 ways of creating routes using CLI.
 
   - Using `oc expose` for unsecure (http) route
-```
+```shell
 oc -n [-dev] expose svc/rocketchat-[username]
 ```
   - Using `oc create route` for secure (https) route
   
-```oc:cli
+```shell
 oc -n [-dev] create route edge rocketchat-[username] --service=rocketchat-[username] --insecure-policy=Redirect
 ```
 
@@ -300,7 +300,7 @@ A container that is marked `ready` when it is not is an indication of a lack of 
 You can add a healthcheck for `readiness` and `liveness`. 
 
 ### Using cli
-```oc:cli
+```shell
 oc -n [-dev] set probe deployment/rocketchat-[username] --readiness --get-url=http://:3000/ --initial-delay-seconds=15
 
 ```

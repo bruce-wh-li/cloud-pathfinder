@@ -16,7 +16,7 @@ The Web Console is the primary tool to visualize events sorted by time.
 
 - Or on the CLI in your project 
 
-```
+```shell
 oc get events --sort-by='.lastTimestamp'
 ```
 
