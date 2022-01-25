@@ -33,4 +33,23 @@ export const en: SidebarConfig = {
       ],
     },
   ],
+  "/materials/gcp_sada/": [
+    {
+      text: "GCP SADA Collaboration",
+      children: [
+        "00_about_bc_gov_cloud.md",
+        "01_sea_at_bc_gov.md",
+        "02_procurement_value_proposition.md",
+        "03_shared_responsibility.md",
+        "04_providing_an_sea_service.md",
+        "05_billing.md",
+        "06_communities_of_practice.md",
+        "07_service_levels.md",
+        "08_demo.md",
+        "09_questions_and_answers.md",
+        "10_extra_slides.md",
+        "summary.md"
+      ],
+    },
+  ],
 };

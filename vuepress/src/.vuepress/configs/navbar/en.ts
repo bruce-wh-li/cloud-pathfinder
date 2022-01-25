@@ -6,18 +6,27 @@ export const en: NavbarConfig = [
     link: "/guide/",
   },
   {
+    text: "Materials",
+    children: [
+      {
+        text: "Pre-Reading Materials",
+        children: [
+          {
+            text: "GCP SADA Collaboration",
+            link: "/materials/gcp_sada/",
+          },
+        ],
+      },
+    ],
+  },
+  {
     text: "Courses",
-    // arialLabel: 'Courses',
     children: [
       {
         text: "OpenShift",
         children: [
           {
-            text: "OpenShift101",
-            link: "/openshift101/",
-          },
-          {
-            text: "OpenShift102",
+            text: "OpenShift 101",
             link: "/openshift101/",
           },
         ],
