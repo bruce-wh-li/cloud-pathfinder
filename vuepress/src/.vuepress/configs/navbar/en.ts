@@ -6,17 +6,18 @@ export const en: NavbarConfig = [
     link: "/guide/",
   },
   {
-    text: "Materials",
+    text: "Documentation",
     children: [
       {
-        text: "Pre-Reading Materials",
+        text: "Pre-Reading Material",
         children: [
           {
-            text: "GCP SADA Collaboration",
-            link: "/materials/gcp_sada/",
+            text: "Pre-Reading Material",
+            link: "/Documentation/AWS-Pre-reading-material/",
           },
         ],
       },
+      
     ],
   },
   {
