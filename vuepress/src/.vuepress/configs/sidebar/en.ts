@@ -33,7 +33,7 @@ export const en: SidebarConfig = {
       ],
     },
   ],
-  "/Documentation/AWS-Pre-reading-material/": [
+  "/Documentation/Pre-reading-material/": [
     {
       text: "Pre Reading Material",
       children: [

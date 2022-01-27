@@ -13,7 +13,7 @@ export const en: NavbarConfig = [
         children: [
           {
             text: "Pre-Reading Material",
-            link: "/Documentation/AWS-Pre-reading-material/",
+            link: "/Documentation/Pre-reading-material/",
           },
         ],
       },

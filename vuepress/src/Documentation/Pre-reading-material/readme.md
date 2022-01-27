@@ -1,7 +1,7 @@
 ![logo called Cloud Pathfinder](./images/cpf_logo.png)
 
 # Overview
-Welcome to the Cloud Pathfinder Pre-Reading Material which is the information Pack for BC Gov Ministry Teams Consideriing Cloud (Updated Sep13,2021)
+Welcome to the Cloud Pathfinder Pre-Reading Material which is the information Pack for BC Gov Ministry Teams Considering Cloud.
 
 Today we will go over the below topics
 
