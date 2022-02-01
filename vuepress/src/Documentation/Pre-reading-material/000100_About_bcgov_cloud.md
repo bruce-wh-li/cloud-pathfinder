@@ -12,7 +12,7 @@
 
     * Our Customers: Project Managers / Product Owners / Expense Authorities
     * Our Users: Developer Teams
-    * Special Users: Security Operations OCIO
+    * Compliance Users: Security Operations OCIO
 
 * Good Service
     * Who do I go to if I have quality issues with Cloud Pathfinder’s service?
