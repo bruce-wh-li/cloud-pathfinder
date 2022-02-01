@@ -21,12 +21,14 @@
 
 - **SecOps** = OCIO Security Operations Team
 
+- **MISO** = Ministry Information Security Officer, embedded as part of the developer team
+
 :::
 
 ---
 * Our Customers: Project Managers / Product Owners / Expense Authorities  
 * Our Users: Developer Teams
-* Special Users: Security Operations OCIO
+* Compliance Users: Security Operations OCIO, MISOs
 
 ## Service Design Customer Focus
 ---

@@ -34,7 +34,7 @@
 
 ![compliant services in GCP](./images/compliant_services_gcp.png)
 ::: tip Acronyms
-- **VMs:** Elastic Compute Cloud Virtual Machines
+- **VMs:** Google Compute Engine
 - **CSP:** Cloud Service Provider
 - **Functions:** A serverless technology where code is run on CSP maintained servers, turned off when not in use
 - **IAM:** Identity Access Management of users in the CSP

@@ -56,10 +56,28 @@
  * ALB: 10.8gb/hr, 250connections/sec, 2min duration,10 request per second
  * Factor in backups, cold storage, dev & test environments which will increase costs depending on how far a team chooses to implement.
 ## Custom Cost Examples ?
- * Yes!
- ![Screen Shot of the AWS Price Calculator page](./images/aws_cost_calculator.png)
- * Use [AWS Pricing Calculator](https://calculator.aws) for now 
+ Yes!
+    
+ * AWS Pricing Calculator
 
+ ![Screen Shot of the AWS Price Calculator page](./images/aws_cost_calculator.png)
+
+
+* Use [AWS Pricing Calculator](https://calculator.aws) for now 
+
+
+* Azure Pricing Calculator
+
+![Screen Shot of the Azure Price Calculator page](./images/azure_pricing.png)
+
+*  Use [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/) for now 
+
+
+* Google Cloud Pricing Calculator
+
+![Screen Shot of the GCP Price Calculator page](./images/gcp_pricing.png)
+
+*  Use [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator) for now 
 ## Billing Process Example
  * These are samples of periodic billing report files we generate for Ministry teams
 ![sample monthly billing report](./images/billing.png)
