@@ -6,18 +6,28 @@ export const en: NavbarConfig = [
     link: "/guide/",
   },
   {
+    text: "Documentation",
+    children: [
+      {
+        text: "Pre-Reading Material",
+        children: [
+          {
+            text: "Pre-Reading Material",
+            link: "/Documentation/Pre-reading-material/",
+          },
+        ],
+      },
+      
+    ],
+  },
+  {
     text: "Courses",
-    // arialLabel: 'Courses',
     children: [
       {
         text: "OpenShift",
         children: [
           {
-            text: "OpenShift101",
-            link: "/openshift101/",
-          },
-          {
-            text: "OpenShift102",
+            text: "OpenShift 101",
             link: "/openshift101/",
           },
         ],

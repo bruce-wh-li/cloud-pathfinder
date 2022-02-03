@@ -1,7 +1,7 @@
 :root {
   // brand colors
-  --c-brand: #D6A104;
-  --c-brand-light: #F2B945;
+  --c-brand: #EB6237;
+  --c-brand-light: #EB6237;
 
   // background colors
   --c-bg: #fffff;
@@ -12,7 +12,7 @@
   --c-bg-arrow: #cccccc;
 
   // text colors
-  --c-text: #2c3e50;
+  --c-text: #214c87;
   --c-text-accent: var(--c-brand);
   --c-text-light: #3a5169;
   --c-text-lighter: #4e6e8e;
@@ -65,7 +65,7 @@
   --navbar-height: 3.6rem;
   --navbar-padding-v: 0.7rem;
   --navbar-padding-h: 1.5rem;
-  --sidebar-width: 20rem;
+  --sidebar-width: 15rem;
   --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
   --content-width: 740px;
   --homepage-width: 960px;
@@ -155,7 +155,7 @@ html.dark {
   --c-border-dark: #34404c;
 
   // custom container colors
-  --c-tip: #318a62;
+  --c-tip: #D6A104;
   --c-tip-bg: var(--c-bg-light);
   --c-tip-title: var(--c-text);
   --c-tip-text: var(--c-text);
