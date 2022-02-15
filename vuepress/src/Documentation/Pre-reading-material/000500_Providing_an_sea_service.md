@@ -19,6 +19,3 @@ The Below Images shows the Complexity of the SEA
  * AWS calls this an “Enterprise Landing Zone”
  * Product built & maintained by AWS and GoC Government of Canada
 
-## BC Gov Microsoft Azure SEA
-![Microsoft azure sea](./images/BC_Gov_GC_Azure_SEA.png)
-

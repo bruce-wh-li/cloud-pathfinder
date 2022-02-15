@@ -64,20 +64,6 @@
 
 
 * Use [AWS Pricing Calculator](https://calculator.aws) for now 
-
-
-* Azure Pricing Calculator
-
-![Screen Shot of the Azure Price Calculator page](./images/azure_pricing.png)
-
-*  Use [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/) for now 
-
-
-* Google Cloud Pricing Calculator
-
-![Screen Shot of the GCP Price Calculator page](./images/gcp_pricing.png)
-
-*  Use [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator) for now 
 ## Billing Process Example
  * These are samples of periodic billing report files we generate for Ministry teams
 ![sample monthly billing report](./images/billing.png)
