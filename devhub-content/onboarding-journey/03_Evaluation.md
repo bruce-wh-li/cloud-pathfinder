@@ -8,9 +8,11 @@ Click on the dots of the tram line navigation up top to proceed along your journ
 # Evaluation
 We recommend that all team members review our pre-reading material: [CloudPathfinderPre-ReadingMaterial.pdf](https://github.com/bcgov/cloud-pathfinder/raw/master/devhub-content/assets/CloudPathfinderPre-ReadingMaterial.pdf)
 
-Ask your Product Owner to begin working on our onboarding forms:
-- [Product Team Profile](https://forms.gle/oGXYqu7vzGD3jhYT9)
-- [Cloud Service Provider selection rationale](https://forms.gle/KFiNVmGhfRuFyohx9)
-- [MOU for expense authority approval of estimated cloud spend](https://forms.gle/J7uEs8ELVDGSyAjB8)
+Ask your Product Owner to begin working on our onboarding [Public Cloud Adopter Intake Form](https://forms.gle/hZhHZBorMNpdJtmX7) which includes sections about:
+
+- Purpose of Your Mission
+- Team Roles & Practices
+- Cloud Selection Provider (CSP) Selection Rationale
+- MOU for Cloud Costs
 
 Let us know if you need help with these forms: [Cloud.Pathfinder@gov.bc.ca](mailto:Cloud.Pathfinder@gov.bc.ca)
