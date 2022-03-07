@@ -16,16 +16,6 @@
 
 * Good Service
     * Who do I go to if I have quality issues with Cloud Pathfinder’s service?
-![organization ladder](./images/org_landscape.drawio.png)
-
-
-
-
-
-
-
-
-
-
-
+    
+![organization ladder](./images/org_landscape.png)
 

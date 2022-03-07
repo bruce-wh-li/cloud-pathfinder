@@ -1,0 +1,48 @@
+name: Generate Pdf
+on:
+  push:
+    branches:
+      - master
+    paths:
+     - "vuepress/src/Documentation/Pre-reading-material/**"
+jobs:
+  convert_via_pandoc:
+    name: Convert via Pandoc
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: create file list
+        id: files_list
+        run: |
+          mkdir output  # create output dir
+          cp -R ./vuepress/src/Documentation/Pre-reading-material/* ./
+          # this will also include README.md
+          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+          
+      - uses: docker://pandoc/latex:2.9
+        with:
+          entrypoint: pandoc
+          args:
+            --pdf-engine=xelatex 
+            --from=gfm
+            --to=pdf
+            --output=output/Pre-reading-material.pdf ${{ steps.files_list.outputs.files }} 
+            --from markdown-yaml_metadata_block
+            --toc -N 
+            -H float.tex
+            -V geometry:a4paper
+            --include-before-body cover.tex
+            -t latex-smart   
+      - name: Copy the generated pdf to docs    
+        run: |
+            cp output/Pre-reading-material.pdf docs/assets/  
+      - name: Commit generated pdf
+        uses: EndBug/add-and-commit@v7
+        with:
+         author_name: GitHub Actions
+         author_email: github-actions@github.com
+         branch: master
+         message: "Automated commit."
+         add: ${{ github.workspace }}/docs
+         cwd: './'
