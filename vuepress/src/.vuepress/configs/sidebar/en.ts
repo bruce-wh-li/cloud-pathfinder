@@ -46,7 +46,7 @@ export const en: SidebarConfig = {
         "000700_communities_of_practise.md",
         "000800_service_levels.md",
         "000900_demo.md",
-        "0001000_questions.md",
+        "001000_questions.md",
         "summary.md",
       ],
     },
