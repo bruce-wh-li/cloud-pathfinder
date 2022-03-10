@@ -10,7 +10,7 @@ Actually it went more like this
 
 ## Procurement Value Add for Ministries
 
-![pathway in a forest with trees on either side](./images/forest.png)
+![pathway in a forest with trees on either side](./images/forest.jpg)
 
  * Don’t have to negotiate privacy, security, legal terms with vendors
  * Don’t have to dig into the cloud services
