@@ -1,0 +1,18 @@
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% center of footer
+\fancyfoot[CO,CE]{CloudPathfinder}
+% page number on the left of even pages and right of odd pages
+\fancyfoot[LE,RO]{\thepage}
+% \usepackage{sectsty}
+% \sectionfont{\clearpage}
+% \usepackage{titlesec}
+% \newcommand{\sectionbreak}{\clearpage}

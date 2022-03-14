@@ -35,6 +35,20 @@ export const en: NavbarConfig = [
     ],
   },
   {
+    text: "Material",
+    children: [
+      {
+        text: "PDF's",
+        children: [
+          {
+            text: "Pre-reading-material",
+            link: "https://github.com/bcgov/cloud-pathfinder/raw/master/docs/assets/Pre-reading-material.pdf",
+          },
+        ],
+      },
+    ],
+  },
+  {
     text: "CloudPathfinder",
     link: "https://github.com/bcgov/cloud-pathfinder",
   },
