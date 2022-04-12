@@ -47,7 +47,6 @@ export const en: SidebarConfig = {
         "000800_service_levels.md",
         "000900_demo.md",
         "001000_questions.md",
-        "summary.md",
       ],
     },
   ],
