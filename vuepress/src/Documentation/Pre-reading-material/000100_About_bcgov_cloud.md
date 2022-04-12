@@ -1,4 +1,4 @@
-# About BC GOV Cloud
+# About BC Gov Cloud
 * What is BC Gov Cloud Pathfinder ?
 
     * We’re a central team in BC Gov tasked with delivering Cloud
