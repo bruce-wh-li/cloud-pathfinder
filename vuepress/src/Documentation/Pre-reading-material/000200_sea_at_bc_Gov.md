@@ -55,7 +55,7 @@ Below is the Training landscape for the AWS
 ## Training Track
 * Training Track (all CSP pattern)
 
-![Trainig Track](./images/training_track.png)
+![Trainig Track](./images/Training-Track-All-CSPs-with-architecture.png)
 
 ## Audience
 
