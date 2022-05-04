@@ -3,7 +3,7 @@
 ## Value of Communities
 
 * A strong community will
-    * Provide an anser before the platform team can
+    * Provide an answer before the platform team can
         * Operational cost savings
         * Faster Service turnarounds
     * Self-organize to co-create reusable artifacts
@@ -119,6 +119,6 @@ A Community platform
 
 * Cloud Pathfinder is available on both 
 
-* Cloud Pathfinder Rocket chat channel : [aws-lz2](https://chat.pathfinder.gov.bc.ca/group/aws-lz2)
+* Cloud Pathfinder Rocket chat channel : [aws-lz2](https://chat.developer.gov.bc.ca/channel/aws-lz2)
 
 
