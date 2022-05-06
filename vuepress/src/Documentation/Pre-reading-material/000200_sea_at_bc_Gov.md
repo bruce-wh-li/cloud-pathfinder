@@ -32,7 +32,7 @@
 * We are aiming for a common service experience regardless of which cloud you are consuming in BC Gov.
 
 ## SEA Future Growth
-Depicted as follows is the growth of services in aws over time
+Depicted as follows is the growth of services in AWS over time
 
 ![Future growth of AWS SEA](./images/aws_sea_future_growth.png)
 
