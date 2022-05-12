@@ -50,13 +50,13 @@
          * Reliability
         * Tools teams need
 
-## Strong Communities in BC Gov
+## Strong Communities in BC Government
 
 * Devops Commons
 
-![image of community in BC Gov](./images/communities1.png)
-![image of community in BC Gov](./images/communities3.png)
-![image of community in BC GoV](./images/communities2.png)
+![image of community in BC Government](./images/communities1.png)
+![image of community in BC Government](./images/communities3.png)
+![image of community in BC Government](./images/communities2.png)
 
 * Features
     *  Every 2 Months
