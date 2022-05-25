@@ -69,4 +69,24 @@
 ## Billing Process Example
  * These are samples of periodic billing report files we generate for Ministry teams
 
-![sample monthly billing report](./images/billing.png)
+![sample weekly billing report email](./images/billing_email.png)
+
+* Email sent out to owners of the project every week with attached consumption report.
+
+* The Email contains information about the total cloud consumption cost across the environments and the details of the environments for the period mentioned in the email.
+
+* The Excell spredsheet attached to the email contains the cost spent on each resource  inside the environment
+
+* Note that the cost also include the baseline costs for running the Secure Environment Accelerator guardrail and logging services within each account. You will see service charges from CloudTrail, CloudWatch, Systems Manager, Secrets Manager, S3, Simple Queue Service, Simple Notification Service, AWS Config, Elastic Load Balancing, GuardDuty, Key Management Service, Lambda, Macie, Security Hub, NAT gateway. If your team has a SandBox account workload environment, you will see EC2 charges due to the independent direct networking. We will will be migrating teams away from SandBoxes to more protected workload environments better aligned to the guardrails.
+
+![Example SpreadSheet Report](./images/example_report.png)
+
+## JV Process
+
+* Accounting process that enables 
+    * Cloud Services Providers and Shared Services Canada to invoice BC Government, and 
+    * You the ministry teams to pay-per-use to cover this cost while
+    * We endeavour to provide a transparent experience
+* Occurs every 3 months
+
+![JV Process](./images/jv.png)
